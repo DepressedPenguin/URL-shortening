@@ -1,0 +1,33 @@
+// .SCSS FILE FOR BOOS LINKS FILE
+.boostLinksSection {
+  background-color: rgb(94, 75, 122);
+  background-image: url("../../assets/images/bg-boost-desktop.svg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  display: grid;
+  height: 200px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+  align-items: center;
+
+  .h1Boos {
+    color: white;
+    font-size: 30px;
+  }
+
+  .btnStarted {
+    padding: 10px;
+    font-size: 18px;
+    background-color: #29d1d4;
+    cursor: pointer;
+    color: white;
+    border-radius: 20px;
+    font-weight: 700;
+    border: none;
+  }
+}

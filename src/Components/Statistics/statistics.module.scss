@@ -1,0 +1,114 @@
+// .SCSS FILE FOR STATISTICS
+.statisticsContainer {
+  margin: 50px;
+  //   border: 1px solid green;
+  width: 80%;
+  margin: auto;
+  padding: 20px;
+}
+
+// SUB CONTAINER
+.subStatistics {
+  display: grid;
+  background-color: #f7f7f7;
+  grid-template-columns: repeat(1, 1fr);
+  border-radius: 10px;
+  gap: 10px;
+  padding: 30px;
+}
+
+// SECTION FOR HEADLINE AND SUB HEADLINE
+.introStatistics {
+  //   border: 1px solid red;
+  text-align: center;
+  margin-bottom: 80px;
+
+  p {
+    font-weight: 700;
+    color: grey;
+  }
+}
+
+.CardText {
+  font-weight: 700;
+  color: grey;
+}
+
+// SECTION FOR LIST OF CARDS
+.cardsStatistics {
+  //   border: 1px solid red;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  padding: 10px;
+}
+
+.cardOne {
+  border: 1px solid white;
+  box-shadow: 5px 5px 5px grey;
+  background-color: white;
+  border-radius: 10px;
+  padding: 30px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 20px;
+}
+
+// ICON CARD
+.iconCard {
+  width: 80px;
+  height: 80px;
+  background-color: #373155;
+
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+// CARD TWO
+.carTwo {
+  border: 1px solid white;
+  box-shadow: 5px 5px 5px grey;
+  border-radius: 10px;
+  background-color: white;
+  padding: 30px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-top: 40px;
+  gap: 20px;
+}
+
+// CARD THEREE
+.carThree {
+  border: 1px solid white;
+  box-shadow: 5px 5px 5px grey;
+  background-color: white;
+  border-radius: 10px;
+  padding: 30px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+
+  gap: 20px;
+  margin-top: 80px;
+}
+
+@media only screen and (max-width: 1200px) {
+  .cardsStatistics {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 10px;
+    padding: 10px;
+  }
+}

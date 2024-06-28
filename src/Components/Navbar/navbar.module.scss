@@ -1,0 +1,157 @@
+// MAIN HEADER
+.mainHeader {
+  // border: 2px solid red;
+  margin: 50px;
+
+  width: 80%;
+  margin: auto;
+  padding: 20px;
+}
+
+.mainNavbar {
+  // border: 2px solid green;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+// UL RIGHT
+.leftNav {
+  //   border: 1px solid red;
+  width: 45%;
+
+  .ul_left {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+
+    list-style-type: none;
+  }
+}
+
+// LI LEFT NAV
+.li_left_nav {
+  font-weight: 600;
+  color: grey;
+  cursor: pointer;
+}
+
+// HOVER
+.li_left_nav:hover {
+  color: black;
+}
+
+// LOGO PLACE DIV
+.logoLi {
+  display: flex;
+}
+
+// UL RIGHT
+.rightNav {
+  //   border: 1px solid red;
+  width: 200px;
+
+  .ul_right {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+
+    list-style-type: none;
+  }
+}
+
+// LI SIGH UP
+.liSignUp {
+  color: white;
+  cursor: pointer;
+  font-weight: 700;
+  background-color: #2eccca;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+// LI LOGIN
+.loginLi {
+  font-weight: 700;
+  cursor: pointer;
+  color: grey;
+}
+
+.menuToggle {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  display: none;
+}
+
+@media only screen and (max-width: 1200px) {
+  .mainHeader {
+    display: none;
+  }
+
+  .menuToggle {
+    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+
+  .mainHeaderMobile {
+    display: flex;
+    align-items: center;
+    background-color: rgb(0, 0, 0, 0.9);
+    flex-direction: column;
+    padding: 10px;
+    height: 100%;
+    top: 0;
+    position: absolute;
+    // border-bottom-right-radius: 10px;
+    z-index: 11111;
+    width: 50%;
+  }
+
+  .mainNavbarMobile {
+    position: absolute;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+
+  .leftNav {
+    //   border: 1px solid red;
+    height: 100%;
+    width: 50%;
+
+    .ul_left {
+      height: 100%;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      justify-content: space-evenly;
+
+      list-style-type: none;
+
+      li {
+        color: white;
+      }
+    }
+  }
+
+  .ul_left li:hover {
+    background-color: #2eccca;
+    transition: all 0.2s;
+    border-radius: 10px;
+    padding: 10px;
+    transform: scale(1.1);
+  }
+
+  .loginLi {
+    font-weight: 700;
+    cursor: pointer;
+    color: white;
+  }
+}
