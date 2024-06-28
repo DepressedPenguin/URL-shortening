@@ -1,19 +1,12 @@
 import styles from "./navbar.module.scss";
-
-// LOGO
 import logo from "../../assets/images/logo.svg";
-// import LoginModal from "../../Modals/LoginModal";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import { useEffect } from "react";
-// import SingUpModal from "../../Modals/SignUpModal";
 
-export default function Navbar() {
-  //
-  const [isLoginForm, setIsLoginForm] = useState(false);
-  const [isSignUp, setIsSignUp] = useState<boolean>(false);
+interface NavbarProps {}
 
+const Navbar: React.FC<NavbarProps> = () => {
   const [isMobileMenu, setIsMobileMenu] = useState(false);
 
   useEffect(() => {
@@ -27,7 +20,7 @@ export default function Navbar() {
           <div className={styles.leftNav}>
             <ul className={styles.ul_left}>
               <li className={styles.logoLi}>
-                <img src={logo} alt={logo} />
+                <img src={logo} alt="Logo" />
               </li>
               <li className={styles.li_left_nav}>Features</li>
               <li className={styles.li_left_nav}>Pricing</li>
@@ -36,29 +29,19 @@ export default function Navbar() {
           </div>
           <div className={styles.rightNav}>
             <ul className={styles.ul_right}>
-              <li
-                onClick={() => setIsLoginForm(!isLoginForm)}
-                className={styles.loginLi}
-              >
-                Login
-              </li>
-              <li
-                onClick={() => setIsSignUp(!isSignUp)}
-                className={styles.liSignUp}
-              >
-                Sign Up
-              </li>
+              <li className={styles.loginLi}>Login</li>
+              <li className={styles.liSignUp}>Sign Up</li>
             </ul>
           </div>
         </nav>
       </header>
 
-      {/* MOBILE HEADER THIS TRICK I DID IS NOT GOOD PRACTICE */}
+      {/* MOBILE HEADER */}
       <div className={styles.menuToggle}>
         {!isMobileMenu && (
           <>
             <li className={styles.logoLi}>
-              <img src={logo} alt={logo} />
+              <img src={logo} alt="Logo" />
             </li>
             <i
               onClick={() => setIsMobileMenu(!isMobileMenu)}
@@ -87,7 +70,7 @@ export default function Navbar() {
             <div className={styles.leftNav}>
               <ul className={styles.ul_left}>
                 <li className={styles.logoLi}>
-                  <img src={logo} alt={logo} />
+                  <img src={logo} alt="Logo" />
                 </li>
                 <li className={styles.li_left_nav}>Features</li>
                 <li className={styles.li_left_nav}>Pricing</li>
@@ -96,18 +79,8 @@ export default function Navbar() {
             </div>
             <div className={styles.rightNav}>
               <ul className={styles.ul_right}>
-                <li
-                  onClick={() => setIsLoginForm(!isLoginForm)}
-                  className={styles.loginLi}
-                >
-                  Login
-                </li>
-                <li
-                  onClick={() => setIsSignUp(!isSignUp)}
-                  className={styles.liSignUp}
-                >
-                  Sign Up
-                </li>
+                <li className={styles.loginLi}>Login</li>
+                <li className={styles.liSignUp}>Sign Up</li>
               </ul>
             </div>
           </nav>
@@ -115,4 +88,6 @@ export default function Navbar() {
       )}
     </>
   );
-}
+};
+
+export default Navbar;

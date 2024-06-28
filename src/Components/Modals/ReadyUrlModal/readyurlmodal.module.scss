@@ -12,9 +12,13 @@
   position: fixed;
 }
 
+.copySpan {
+  cursor: pointer;
+}
+
 // PARENT MODAL THAT MAKE LITTLE BIT DARK
 .ParentModal {
-  background-color: rgb(0, 0, 0, 0.6);
+  background-color: rgb(0, 0, 0, 0.4);
 }
 
 // MAIN BOX MODAL
@@ -97,7 +101,7 @@
 
 .urlInput {
   //   border: 1px solid white;
-  // border-bottom: 1px solid white;
+  border-bottom: 1px solid white;
   height: 50%;
 
   display: flex;

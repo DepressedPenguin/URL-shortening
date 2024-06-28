@@ -5,6 +5,17 @@ interface PropsInput {
 }
 
 export default function ReadyUrlModal({ ShortIt }: PropsInput) {
+  const copyToClipboard = () => {
+    navigator.clipboard
+      .writeText(ShortIt)
+      .then(() => {
+        alert("Copied");
+      })
+      .catch((error) => {
+        console.error("Failed to copy:", error);
+      });
+  };
+
   return (
     <>
       <div className={styles.ParentDarken}>
@@ -14,7 +25,7 @@ export default function ReadyUrlModal({ ShortIt }: PropsInput) {
               <img
                 className={styles.imgClass}
                 src="https://i.imgur.com/iblA4kB.png"
-                alt="https://i.imgur.com/iblA4kB.png"
+                alt="Shortened URL"
               />
             </div>
             <div className={styles.urlSide}>
@@ -25,8 +36,9 @@ export default function ReadyUrlModal({ ShortIt }: PropsInput) {
                   id="shortUrl"
                   value={ShortIt}
                   className={styles.inputShortit}
+                  readOnly
                 />
-                <p className={styles.copySpan}>
+                <p className={styles.copySpan} onClick={copyToClipboard}>
                   <i className={`${styles.iconCopy} fa fa-copy`}></i>
                 </p>
               </div>
